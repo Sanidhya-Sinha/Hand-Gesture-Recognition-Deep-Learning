@@ -106,12 +106,6 @@ while True:
     # Printing the count in each set to the screen
     cv2.putText(frame, "MODE : "+mode, (10, 20), cv2.FONT_HERSHEY_COMPLEX_SMALL, 1, (0,255,255), 1)
     cv2.putText(frame, "IMAGE COUNT", (10, 60), cv2.FONT_HERSHEY_TRIPLEX, 1, (0,255,255), 1)
-    #cv2.putText(frame, "ZERO : "+str(count['zero']), (10, 75), cv2.FONT_HERSHEY_PLAIN, 1, (0,255,255), 1)
-    #cv2.putText(frame, "ONE : "+str(count['one']), (10, 90), cv2.FONT_HERSHEY_PLAIN, 1, (0,255,255), 1)
-    #cv2.putText(frame, "TWO : "+str(count['two']), (10, 105), cv2.FONT_HERSHEY_PLAIN, 1, (0,255,255), 1)
-    #cv2.putText(frame, "THREE : "+str(count['three']), (10, 120), cv2.FONT_HERSHEY_PLAIN, 1, (0,255,255), 1)
-    #cv2.putText(frame, "FOUR : "+str(count['four']), (10, 135), cv2.FONT_HERSHEY_PLAIN, 1, (0,255,255), 1)
-    #cv2.putText(frame, "FIVE : "+str(count['five']), (10, 150), cv2.FONT_HERSHEY_PLAIN, 1, (0,255,255), 1)
     cv2.putText(frame, "A : "+str(count['A']), (10, 75), cv2.FONT_HERSHEY_PLAIN, 1, (0,0,255), 1)
     cv2.putText(frame, "B : "+str(count['B']), (10, 90), cv2.FONT_HERSHEY_PLAIN, 1, (0,0,255), 1)
     cv2.putText(frame, "C : "+str(count['C']), (10, 105), cv2.FONT_HERSHEY_PLAIN, 1, (0,0,255), 1)

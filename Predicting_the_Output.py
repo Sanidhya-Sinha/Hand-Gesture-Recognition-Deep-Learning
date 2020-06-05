@@ -15,12 +15,6 @@ print("Loaded model from disk")
 
 cap = cv2.VideoCapture(0)
 
-# Category dictionary
-#categories = {0: 'ZERO', 1: 'ONE', 2: 'TWO', 3: 'THREE', 4: 'FOUR', 5: 'FIVE', 6: 'A', 7: 'B', 8: 'C',
-#              9: 'D', 10: 'E', 11: 'F', 12: 'G', 13: 'H', 14: 'I', 15: 'J', 16: 'K', 17: 'L', 18: 'M',
-#              19: 'N', 20: 'O', 21: 'P', 22: 'Q', 23: 'R', 24: 'S', 25: 'T',26: 'U', 27: 'V', 28: 'W',
-#              29: 'X', 30: 'Y', 31: 'Z'}
-
 categories = {0: 'A', 1: 'B', 2: 'C', 3: 'D', 4: 'E', 5: 'F', 6: 'G', 7: 'H', 8: 'I', 9: 'J',
               10: 'K', 11: 'L', 12: 'M', 13: 'N', 14: 'O', 15: 'P', 16: 'Q', 17: 'R', 18: 'S',
               19: 'T',20: 'U', 21: 'V', 22: 'W', 23: 'X', 24: 'Y', 25: 'Z'}
@@ -51,40 +45,7 @@ while True:
     _, test_image = cv2.threshold(roi, 120, 255, cv2.THRESH_BINARY)
     cv2.imshow("test", test_image)
     # Batch of 1
-    result = loaded_model.predict(test_image.reshape(1, 64, 64, 1))
-    '''  prediction = {'ZERO': result[0][0], 
-                  'ONE': result[0][1], 
-                  'TWO': result[0][2],
-                  'THREE': result[0][3],
-                  'FOUR': result[0][4],
-                  'FIVE': result[0][5],
-                  'A': result[0][6], 
-                  'B': result[0][7], 
-                  'C': result[0][8],
-                  'D': result[0][9],
-                  'E': result[0][10],
-                  'F': result[0][11],
-                  'G': result[0][12], 
-                  'H': result[0][13], 
-                  'I': result[0][14],
-                  'J': result[0][15],
-                  'K': result[0][16],
-                  'L': result[0][17],
-                  'M': result[0][18], 
-                  'N': result[0][19], 
-                  'O': result[0][20],
-                  'P': result[0][21],
-                  'Q': result[0][22],
-                  'R': result[0][23],
-                  'S': result[0][24], 
-                  'T': result[0][25], 
-                  'U': result[0][26],
-                  'V': result[0][27],
-                  'W': result[0][28],
-                  'X': result[0][29],
-                  'Y': result[0][30],
-                  'Z': result[0][31]} '''
-    
+    result = loaded_model.predict(test_image.reshape(1, 64, 64, 1))    
     prediction = {'A': result[0][0], 
                   'B': result[0][1], 
                   'C': result[0][2],
