@@ -1,1 +1,1 @@
-# Letter-Recognition
+# ASL Hand Gesture Letter-Recognition
